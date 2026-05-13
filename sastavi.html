@@ -105,6 +105,20 @@
 
 </body>
 </html>
+<script>
+function showPlayer(name, pos, rating) {
+
+  document.getElementById("pName").innerText = name;
+  document.getElementById("pPos").innerText = "Pozicija: " + pos;
+  document.getElementById("pRating").innerText = "Rating: " + rating;
+
+  document.getElementById("popup").style.display = "flex";
+}
+
+function closePopup() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
 
 <div id="popup" class="popup">
   <div class="popup-content">
