@@ -29,13 +29,13 @@
   <div class="field">
     <img src="images/team1.jpg">
 
-    <div class="player gk">GK - Marko</div>
+  <div class="player gk" onclick="showPlayer('Marko','GK',87)">GK - Marko</div>
 
-<div class="player cb1">CB - Luka</div>
-<div class="player cb2">CB - Petar</div>
+<div class="player cb1" onclick="showPlayer('Luka','CB',82)">CB - Luka</div>
+<div class="player cb2" onclick="showPlayer('Petar','CB',80)">CB - Petar</div>
 
-<div class="player st1">ST - Nikola</div>
-<div class="player st2">ST - Ivan</div>
+<div class="player st1" onclick="showPlayer('Nikola','ST',88)">ST - Nikola</div>
+<div class="player st2" onclick="showPlayer('Ivan','ST',85)">ST - Ivan</div>
   </div>
 
   <h2>FK Bernabeu</h2>
@@ -48,13 +48,13 @@
   <div class="field">
     <img src="images/team2.jpg">
 
-    <div class="player gk">GK - Stefan</div>
+   <div class="player gk" onclick="showPlayer('Marko','GK',87)">GK - Marko</div>
 
-<div class="player cb1">CB - Miloš</div>
-<div class="player cb2">CB - Andrej</div>
+<div class="player cb1" onclick="showPlayer('Luka','CB',82)">CB - Luka</div>
+<div class="player cb2" onclick="showPlayer('Petar','CB',80)">CB - Petar</div>
 
-<div class="player st1">ST - David</div>
-<div class="player st2">ST - Filip</div>
+<div class="player st1" onclick="showPlayer('Nikola','ST',88)">ST - Nikola</div>
+<div class="player st2" onclick="showPlayer('Ivan','ST',85)">ST - Ivan</div>
   </div>
 
   <h2>FK Sutjeska</h2>
@@ -67,13 +67,13 @@
   <div class="field">
     <img src="images/team3.jpg">
 
-   <div class="player gk">GK - Jovan</div>
+   <div class="player gk" onclick="showPlayer('Marko','GK',87)">GK - Marko</div>
 
-<div class="player cb1">CB - Nemanja</div>
-<div class="player cb2">CB - Uroš</div>
+<div class="player cb1" onclick="showPlayer('Luka','CB',82)">CB - Luka</div>
+<div class="player cb2" onclick="showPlayer('Petar','CB',80)">CB - Petar</div>
 
-<div class="player st1">ST - Vuk</div>
-<div class="player st2">ST - Lazar</div>
+<div class="player st1" onclick="showPlayer('Nikola','ST',88)">ST - Nikola</div>
+<div class="player st2" onclick="showPlayer('Ivan','ST',85)">ST - Ivan</div>
   </div>
 
   <h2>Paris-Saint-Germain</h2>
@@ -86,13 +86,13 @@
   <div class="field">
     <img src="images/team4.jpg">
 
-    <<div class="player gk">GK - Aleksa</div>
+   <div class="player gk" onclick="showPlayer('Marko','GK',87)">GK - Marko</div>
 
-<div class="player cb1">CB - Pavle</div>
-<div class="player cb2">CB - Relja</div>
+<div class="player cb1" onclick="showPlayer('Luka','CB',82)">CB - Luka</div>
+<div class="player cb2" onclick="showPlayer('Petar','CB',80)">CB - Petar</div>
 
-<div class="player st1">ST - Ognjen</div>
-<div class="player st2">ST - Matija</div>
+<div class="player st1" onclick="showPlayer('Nikola','ST',88)">ST - Nikola</div>
+<div class="player st2" onclick="showPlayer('Ivan','ST',85)">ST - Ivan</div>
   </div>
 
   <h2>FK Barcelona</h2>
@@ -105,3 +105,15 @@
 
 </body>
 </html>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+
+    <h2 id="pName"></h2>
+    <p id="pPos"></p>
+    <p id="pRating"></p>
+
+    <button onclick="closePopup()">ZATVORI</button>
+
+  </div>
+</div>
