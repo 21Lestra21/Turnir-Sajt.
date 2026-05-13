@@ -233,3 +233,73 @@ body::before {
 .formation-card:hover {
   transform: scale(1.05);
 }
+
+/* FORMACIJE */
+.formations {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* KARTICA */
+.formation-card {
+  background: rgba(0,0,0,0.7);
+  padding: 15px;
+  border-radius: 15px;
+  width: 260px;
+  transition: 0.3s;
+}
+
+.formation-card:hover {
+  transform: scale(1.05);
+}
+
+/* TEREN */
+.field {
+  position: relative;
+}
+
+.field img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* IGRAČI */
+.player {
+  position: absolute;
+  background: rgba(0,0,0,0.8);
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  color: white;
+}
+
+/* GK */
+.gk {
+  bottom: 10px;
+  left: 38%;
+}
+
+/* CB */
+.cb1 {
+  bottom: 80px;
+  left: 18%;
+}
+
+.cb2 {
+  bottom: 80px;
+  right: 18%;
+}
+
+/* ST */
+.st1 {
+  top: 40px;
+  left: 18%;
+}
+
+.st2 {
+  top: 40px;
+  right: 18%;
+}
