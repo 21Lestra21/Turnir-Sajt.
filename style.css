@@ -168,3 +168,39 @@ body::before {
   border-radius: 10px;
   border: none;
 }
+
+/* LOGIN SCREEN */
+.login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* LOGIN BOX */
+.login-box {
+  background: rgba(0,0,0,0.75);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+}
+
+/* INPUT */
+.login-box input {
+  width: 220px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+}
+
+/* BUTTON */
+.login-box button {
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+}
