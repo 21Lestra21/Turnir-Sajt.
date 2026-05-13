@@ -20,35 +20,81 @@
 
   <h1>⚽ Prognoze Utakmica</h1>
 
+  <!-- UTAKMICA 1 -->
   <div class="prediction-box">
 
-    <h2>FK Bernabeu vs FK Sutjeska</h2>
+    <h2>Tim A vs Tim B</h2>
 
-    <input type="number" id="scoreA" placeholder="Tim 1">
-    <input type="number" id="scoreB" placeholder="Tim 2">
-
-    <br><br>
-
-    <button onclick="savePrediction()">
-      Sačuvaj Prognozu
-    </button>
-
-    <p id="result"></p>
+    <input type="number" id="a1" placeholder="A">
+    <input type="number" id="b1" placeholder="B">
 
   </div>
+
+  <!-- UTAKMICA 2 -->
+  <div class="prediction-box">
+
+    <h2>Tim C vs Tim D</h2>
+
+    <input type="number" id="a2" placeholder="C">
+    <input type="number" id="b2" placeholder="D">
+
+  </div>
+
+  <br>
+
+  <button onclick="savePredictions()">
+    SAČUVAJ PROGNOZE
+  </button>
+
+  <p id="saved"></p>
 
 </div>
 
 <script>
-function savePrediction() {
 
-  let a = document.getElementById("scoreA").value;
-  let b = document.getElementById("scoreB").value;
+function savePredictions() {
 
-  document.getElementById("result").innerHTML =
-    `Tvoja prognoza: Tim 1 ${a} - ${b} Tim 2`;
+  const predictions = {
 
+    game1: {
+      a: document.getElementById("a1").value,
+      b: document.getElementById("b1").value
+    },
+
+    game2: {
+      a: document.getElementById("a2").value,
+      b: document.getElementById("b2").value
+    }
+
+  };
+
+  localStorage.setItem(
+    "footballPredictions",
+    JSON.stringify(predictions)
+  );
+
+  document.getElementById("saved").innerHTML =
+    "✅ Prognoze sačuvane!";
 }
+
+function loadPredictions() {
+
+  const data =
+    JSON.parse(localStorage.getItem("footballPredictions"));
+
+  if(data) {
+
+    document.getElementById("a1").value = data.game1.a;
+    document.getElementById("b1").value = data.game1.b;
+
+    document.getElementById("a2").value = data.game2.a;
+    document.getElementById("b2").value = data.game2.b;
+
+  }
+}
+
+loadPredictions();
+
 </script>
 
 </body>
