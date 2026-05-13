@@ -93,3 +93,27 @@ body::before {
   transform: scale(1.1);
   background: rgba(0, 255, 0, 0.2);
 }
+
+/* TABELA */
+.table {
+  margin: auto;
+  margin-top: 30px;
+  border-collapse: collapse;
+  width: 60%;
+  background: rgba(0,0,0,0.6);
+}
+
+.table th, .table td {
+  border: 1px solid white;
+  padding: 10px;
+  color: white;
+}
+
+/* UTAKMICE */
+.match {
+  background: rgba(0,0,0,0.6);
+  margin: 15px auto;
+  padding: 15px;
+  width: 300px;
+  border-radius: 10px;
+}
