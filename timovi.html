@@ -8,7 +8,6 @@
 
 <body>
 
-<!-- NAVIGACIJA -->
 <nav class="navbar">
   <button onclick="location.href='index.html'">POČETAK</button>
   <button onclick="location.href='timovi.html'">TIMOVI</button>
@@ -16,34 +15,77 @@
   <button onclick="location.href='utakmice.html'">UTAKMICE</button>
 </nav>
 
-<!-- SADRŽAJ -->
 <div class="content">
   <h1>⚽ Timovi Turnira</h1>
 
   <div class="teams">
 
-    <div class="team-card">
+    <div class="team-card" onclick="showTeam('A')">
       <h2>Tim A</h2>
-      <p>⭐ 5 igrača</p>
     </div>
 
-    <div class="team-card">
+    <div class="team-card" onclick="showTeam('B')">
       <h2>Tim B</h2>
-      <p>⭐ 5 igrača</p>
     </div>
 
-    <div class="team-card">
+    <div class="team-card" onclick="showTeam('C')">
       <h2>Tim C</h2>
-      <p>⭐ 5 igrača</p>
     </div>
 
-    <div class="team-card">
+    <div class="team-card" onclick="showTeam('D')">
       <h2>Tim D</h2>
-      <p>⭐ 5 igrača</p>
     </div>
 
   </div>
+
+  <!-- IGRAČI -->
+  <div id="players" class="players-box"></div>
+
 </div>
+
+<script>
+const teams = {
+  A: [
+    {name: "Marko", pos: "GK"},
+    {name: "Luka", pos: "DF"},
+    {name: "Ivan", pos: "MF"},
+    {name: "Nikola", pos: "FW"}
+  ],
+
+  B: [
+    {name: "Petar", pos: "GK"},
+    {name: "Stefan", pos: "DF"},
+    {name: "Andrej", pos: "MF"},
+    {name: "Miloš", pos: "FW"}
+  ],
+
+  C: [
+    {name: "Jovan", pos: "GK"},
+    {name: "David", pos: "DF"},
+    {name: "Marko", pos: "MF"},
+    {name: "Filip", pos: "FW"}
+  ],
+
+  D: [
+    {name: "Aleksa", pos: "GK"},
+    {name: "Vuk", pos: "DF"},
+    {name: "Nemanja", pos: "MF"},
+    {name: "Uroš", pos: "FW"}
+  ]
+};
+
+function showTeam(team) {
+  let box = document.getElementById("players");
+
+  let html = `<h2>Tim ${team} - Igrači</h2>`;
+
+  teams[team].forEach(player => {
+    html += `<p>${player.name} (${player.pos})</p>`;
+  });
+
+  box.innerHTML = html;
+}
+</script>
 
 </body>
 </html>
