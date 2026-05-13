@@ -132,3 +132,21 @@ body::before {
 .team-card {
   cursor: pointer;
 }
+
+.prediction-box {
+  background: rgba(0,0,0,0.7);
+  padding: 25px;
+  border-radius: 15px;
+  width: 350px;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.prediction-box input {
+  width: 80px;
+  padding: 10px;
+  font-size: 18px;
+  text-align: center;
+  border-radius: 10px;
+  border: none;
+}
