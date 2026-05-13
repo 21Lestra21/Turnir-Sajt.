@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Prognoze</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+  <button onclick="location.href='index.html'">POČETAK</button>
+  <button onclick="location.href='timovi.html'">TIMOVI</button>
+  <button onclick="location.href='tabela.html'">TABELA</button>
+  <button onclick="location.href='utakmice.html'">UTAKMICE</button>
+  <button onclick="location.href='prognoze.html'">PROGNOZE</button>
+</nav>
+
+<div class="content">
+
+  <h1>⚽ Prognoze Utakmica</h1>
+
+  <div class="prediction-box">
+
+    <h2>Tim A vs Tim B</h2>
+
+    <input type="number" id="scoreA" placeholder="Tim A">
+    <input type="number" id="scoreB" placeholder="Tim B">
+
+    <br><br>
+
+    <button onclick="savePrediction()">
+      Sačuvaj Prognozu
+    </button>
+
+    <p id="result"></p>
+
+  </div>
+
+</div>
+
+<script>
+function savePrediction() {
+
+  let a = document.getElementById("scoreA").value;
+  let b = document.getElementById("scoreB").value;
+
+  document.getElementById("result").innerHTML =
+    `Tvoja prognoza: Tim A ${a} - ${b} Tim B`;
+
+}
+</script>
+
+</body>
+</html>
